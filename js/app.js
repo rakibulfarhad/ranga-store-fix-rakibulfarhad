@@ -14,19 +14,19 @@ const showProducts = (products) => {
 
       const { rate, count } = product.rating
 
-    const div = document.createElement("div");
-    div.classList.add("product");
-    div.innerHTML = `<div class="single-product">
-      <div>
-      <img class="product-image" src=${image}></img>
-      </div>
-      <h4>${product.title}</h4>
-      <p>Category: ${product.category}</p>
-      <h3>Price: $ ${product.price}</h3>
-      <h5>Total-Rating : ${count}   </h5>
-      <h6>Average-rating: ${rate}</h6>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" onclick='showDetails(${product.price},${rate})' class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Details</button></div>
+      const div = document.createElement("div");
+      div.classList.add("product");
+      div.innerHTML = `<div class="single-product">
+        <div>
+        <img class="product-image" src=${image}></img>
+        </div>
+        <h4>${product.title}</h4>
+        <p>Category: ${product.category}</p>
+        <h3>Price: $ ${product.price}</h3>
+        <h5>Total-Rating : ${count}   </h5>
+        <h6>Average-rating: ${rate}</h6>
+        <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
+        <button id="details-btn" onclick='showDetails(${product.price},${rate})' class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Details</button></div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
