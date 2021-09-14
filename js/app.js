@@ -22,7 +22,7 @@ const showProducts = (products) => {
         </div>
         <h4>${product.title}</h4>
         <p>Category: ${product.category}</p>
-        <h3>Price: $ ${product.price}</h3>
+        <h4>Price: $ ${product.price}</h4>
         <h5>Total-Rating : ${count}   </h5>
         <h6>Average-rating: ${rate}</h6>
         <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
@@ -38,9 +38,9 @@ const showDetails = (price, rating) => {
   document.getElementById("modal-body").innerHTML = `
    <div class='p-3'>
       <p>Rating: ${Array.from(Array(parseInt(rating)).keys()).map(
-      (r) => '<i class="bi bi-star-fill text-warning"></i>'
+      (r) => '<i class="bi bi-star-fill text-success"></i>'
       )}</p>
-      <h3>Price: $ ${price}</h3>
+      <h5>Price: $ ${price}</h5>
     </div>
   `;
 
